@@ -32,7 +32,11 @@ This module manages Azure CosmosDB.
 | cosmosdb_account | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
 | cosmosdb_mongo_collection | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
 
+## Outputs
 
+| Name | Description |
+|------|-------------|
+| cosmosdb_account | azurerm_cosmosdb_account results |
 
 ## Examples
 
