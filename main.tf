@@ -12,16 +12,15 @@ resource "azurerm_cosmosdb_account" "cosmosdb_account" {
   resource_group_name = local.cosmosdb_account[each.key].resource_group_name
   location            = local.cosmosdb_account[each.key].location
 
-  offer_type                        = local.cosmosdb_account[each.key].offer_type
-  default_identity_type             = local.cosmosdb_account[each.key].default_identity_type
-  kind                              = local.cosmosdb_account[each.key].kind
-  ip_range_filter                   = local.cosmosdb_account[each.key].ip_range_filter
-  enable_free_tier                  = local.cosmosdb_account[each.key].enable_free_tier
-  analytical_storage_enabled        = local.cosmosdb_account[each.key].analytical_storage_enabled
-  enable_automatic_failover         = local.cosmosdb_account[each.key].enable_automatic_failover
-  public_network_access_enabled     = local.cosmosdb_account[each.key].public_network_access_enabled
-  is_virtual_network_filter_enabled = local.cosmosdb_account[each.key].is_virtual_network_filter_enabled
-  #key_vault_key_id = local.cosmosdb_account[each.key].key_vault_key_id
+  offer_type                            = local.cosmosdb_account[each.key].offer_type
+  default_identity_type                 = local.cosmosdb_account[each.key].default_identity_type
+  kind                                  = local.cosmosdb_account[each.key].kind
+  ip_range_filter                       = local.cosmosdb_account[each.key].ip_range_filter
+  enable_free_tier                      = local.cosmosdb_account[each.key].enable_free_tier
+  analytical_storage_enabled            = local.cosmosdb_account[each.key].analytical_storage_enabled
+  enable_automatic_failover             = local.cosmosdb_account[each.key].enable_automatic_failover
+  public_network_access_enabled         = local.cosmosdb_account[each.key].public_network_access_enabled
+  is_virtual_network_filter_enabled     = local.cosmosdb_account[each.key].is_virtual_network_filter_enabled
   enable_multiple_write_locations       = local.cosmosdb_account[each.key].enable_multiple_write_locations
   access_key_metadata_writes_enabled    = local.cosmosdb_account[each.key].access_key_metadata_writes_enabled
   mongo_server_version                  = local.cosmosdb_account[each.key].mongo_server_version
