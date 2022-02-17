@@ -1,5 +1,5 @@
 module "cosmosdb" {
-  source = "../modules/azure/terraform-cosmosdb"
+  source = "registry.terraform.io/T-Systems-MMS/cosmosdb/azurerm"
   cosmosdb_account = {
     service-cdb = {
       location                   = "westeurope"

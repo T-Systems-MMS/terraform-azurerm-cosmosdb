@@ -86,10 +86,6 @@ resource "azurerm_cosmosdb_account" "cosmosdb_account" {
     }
   }
 
-  // cors_rule {}
-  // identity {}
-  // restore {}
-
   tags = local.cosmosdb_account[each.key].tags
 }
 
