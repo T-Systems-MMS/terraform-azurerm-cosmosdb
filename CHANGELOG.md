@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.0.1](https://github.com/T-Systems-MMS/terraform-cosmosdb/tree/0.0.1) (2022-02-07)
+## [0.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-cosmosdb/tree/0.0.1) (2022-02-07)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-cosmosdb/compare/50119c5aa71ab4c2f65002ec9394f97126cd39fc...0.0.1)
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-cosmosdb/compare/50119c5aa71ab4c2f65002ec9394f97126cd39fc...0.0.1)
 
 
 
