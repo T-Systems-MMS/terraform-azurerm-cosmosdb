@@ -1,4 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
+
 # cosmosdb
 
 This module manages Azure CosmosDB.
@@ -7,35 +8,35 @@ This module manages Azure CosmosDB.
 
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| terraform | >=1.0 |
-| azurerm | >=2.89.0 |
+| Name      | Version  |
+| --------- | -------- |
+| terraform | >=1.0    |
+| azurerm   | >=2.89.0 |
 
 ## Providers
 
-| Name | Version |
-|------|---------|
+| Name    | Version  |
+| ------- | -------- |
 | azurerm | >=2.89.0 |
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| azurerm_cosmosdb_account.cosmosdb_account | resource |
+| Name                                                        | Type     |
+| ----------------------------------------------------------- | -------- |
+| azurerm_cosmosdb_account.cosmosdb_account                   | resource |
 | azurerm_cosmosdb_mongo_collection.cosmosdb_mongo_collection | resource |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| cosmosdb_account | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
-| cosmosdb_mongo_collection | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| Name                      | Description                                                                                  | Type  | Default | Required |
+| ------------------------- | -------------------------------------------------------------------------------------------- | ----- | ------- | :------: |
+| cosmosdb_account          | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
+| cosmosdb_mongo_collection | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
+| Name             | Description                      |
+| ---------------- | -------------------------------- |
 | cosmosdb_account | azurerm_cosmosdb_account results |
 
 ## Examples
@@ -83,4 +84,5 @@ module "cosmosdb" {
   }
 }
 ```
+
 <!-- END_TF_DOCS -->
