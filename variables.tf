@@ -59,7 +59,7 @@ locals {
         storage_redundancy  = null
       }
       cors_rule = {}
-      identity = {}
+      identity  = {}
       restore = {
         source_cosmosdb_account_id = ""
         database                   = null

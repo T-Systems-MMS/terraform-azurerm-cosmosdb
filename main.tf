@@ -112,32 +112,33 @@ resource "azurerm_cosmosdb_account" "cosmosdb_account" {
   tags = local.cosmosdb_account[each.key].tags
 }
 
-# resource "azurerm_cosmosdb_mongo_collection" "cosmosdb_mongo_collection" {
-#   for_each = var.cosmosdb_mongo_collection
+resource "azurerm_cosmosdb_mongo_collection" "cosmosdb_mongo_collection" {
+  for_each = var.cosmosdb_mongo_collection
 
-#   name                   = local.cosmosdb_mongo_collection[each.key].name == "" ? each.key : local.cosmosdb_mongo_collection[each.key].name
-#   resource_group_name    = local.cosmosdb_mongo_collection[each.key].resource_group_name
-#   database_name          = local.cosmosdb_mongo_collection[each.key].database_name
-#   shard_key              = local.cosmosdb_mongo_collection[each.key].shard_key
-#   analytical_storage_ttl = local.cosmosdb_mongo_collection[each.key].analytical_storage_ttl
-#   default_ttl_seconds    = local.cosmosdb_mongo_collection[each.key].default_ttl_seconds
-#   throughput             = local.cosmosdb_mongo_collection[each.key].throughput
+  name                   = local.cosmosdb_mongo_collection[each.key].name == "" ? each.key : local.cosmosdb_mongo_collection[each.key].name
+  resource_group_name    = local.cosmosdb_mongo_collection[each.key].resource_group_name
+  account_name           = local.cosmosdb_mongo_collection[each.key].account_name
+  database_name          = local.cosmosdb_mongo_collection[each.key].database_name
+  shard_key              = local.cosmosdb_mongo_collection[each.key].shard_key
+  analytical_storage_ttl = local.cosmosdb_mongo_collection[each.key].analytical_storage_ttl
+  default_ttl_seconds    = local.cosmosdb_mongo_collection[each.key].default_ttl_seconds
+  throughput             = local.cosmosdb_mongo_collection[each.key].throughput
 
-#   dynamic "index" {
-#     for_each = local.cosmosdb_mongo_collection[each.key].index.keys != {} ? [1] : []
-#     content {
-#       keys   = local.cosmosdb_mongo_collection[each.key].index.keys
-#       unique = local.cosmosdb_mongo_collection[each.key].index.unique
-#     }
-#   }
+  dynamic "index" {
+    for_each = local.cosmosdb_mongo_collection[each.key].index.keys != {} ? [1] : []
+    content {
+      keys   = local.cosmosdb_mongo_collection[each.key].index.keys
+      unique = local.cosmosdb_mongo_collection[each.key].index.unique
+    }
+  }
 
-#   dynamic "autoscale_settings" {
-#     for_each = local.cosmosdb_mongo_collection[each.key].autoscale_settings != {} ? [1] : []
-#     content {
-#       max_throughput = local.cosmosdb_mongo_collection[each.key].autoscale_settings.max_throughput
-#     }
-#   }
-# }
+  dynamic "autoscale_settings" {
+    for_each = local.cosmosdb_mongo_collection[each.key].autoscale_settings != {} ? [1] : []
+    content {
+      max_throughput = local.cosmosdb_mongo_collection[each.key].autoscale_settings.max_throughput
+    }
+  }
+}
 
 resource "azurerm_cosmosdb_mongo_database" "cosmosdb_mongo_database" {
   for_each = var.cosmosdb_mongo_database

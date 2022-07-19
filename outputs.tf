@@ -3,12 +3,12 @@ output "cosmosdb_account" {
   value = {
     for cosmosdb_account in keys(azurerm_cosmosdb_account.cosmosdb_account) :
     cosmosdb_account => {
-      id   = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].id
-      name = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].name
-      endpoint = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].endpoint
-      read_endpoints  = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].read_endpoints
-      write_endpoints  = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].write_endpoints
-      connection_strings  = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].connection_strings
+      id                 = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].id
+      name               = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].name
+      endpoint           = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].endpoint
+      read_endpoints     = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].read_endpoints
+      write_endpoints    = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].write_endpoints
+      connection_strings = azurerm_cosmosdb_account.cosmosdb_account[cosmosdb_account].connection_strings
     }
   }
 }
