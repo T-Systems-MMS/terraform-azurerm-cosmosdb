@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     name: create release draft
     steps:
-      - uses: actions/checkout@v3.0.2
+      - uses: actions/checkout@v2.3.4
         with:
           fetch-depth: 0
 
@@ -42,7 +42,7 @@ jobs:
           output-method: inject
 
       - name: push changelog and readme
-        uses: github-actions-x/commit@v2.9
+        uses: github-actions-x/commit@v2.6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: 'main'
@@ -54,7 +54,7 @@ jobs:
 
       # do a second checkout to prevent race situation
       # changelog gets updated but action works on old commit id
-      - uses: actions/checkout@v3.0.2
+      - uses: actions/checkout@v2.3.4
         with:
           ref: main
 
